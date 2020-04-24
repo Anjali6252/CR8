@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet">
+    <title>Top Selling Games</title>
+</head>
+
+<body>
+    <div class="topContainer">
+        <div class="searchbox">
+            <input type="text" placeholder="Search" name="search" id="searchid">
+            <button class="searchButton" onclick="filterData()">Find</button>
+        </div>        
+        <div class="right-container">
+            <div class="sort-container">
+                <select id="sortList" onchange="SortedGames(event.target.value)">
+                <option value="Rank">SortByRank</option>
+                <option value="Year">SortByYear</option>
+                </select>
+            </div>
+            <div>
+                <select id="Showlist" onchange="getDefinedList()">
+                    <option value="10">10 entries</option>
+                    <option value="20">20 entries</option>
+                    <option value="50">50 entries</option>
+                    <option value="all">All entries</option>
+                </select>
+            </div>
+            <div>
+                <button onclick="previous()">Prev</button>
+            </div>
+            <div id="pageNumber">1</div>
+            <div>
+                <button onclick="nextPage()">Next</button>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="container" id="container"></div>
+    <script src="main.js"></script>
+</body>
+
+</html>
